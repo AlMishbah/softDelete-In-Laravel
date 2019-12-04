@@ -16,6 +16,7 @@ class CreateTrashesTable extends Migration
         Schema::create('trashes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('slug');
             $table->softDeletes(); //Fitur softdelete bawaan laravel
             $table->timestamps();
         });

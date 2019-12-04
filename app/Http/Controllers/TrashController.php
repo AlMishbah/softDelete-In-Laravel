@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Trash;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+
 
 class TrashController extends Controller
 {
@@ -41,7 +43,8 @@ class TrashController extends Controller
         ]);
 
         $input = Trash::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'slug' => Str::slug($request->name)
         ]);
 
         return redirect()->route('trash.index')->with('success', 'Data berhasil ditambahkan');

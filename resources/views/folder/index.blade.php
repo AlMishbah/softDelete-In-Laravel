@@ -15,6 +15,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
+                <th>Slug</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
             <tr>
                     <td>{{ $result + $trash->firstitem() }}</td>
                     <td>{{ $hasil->name }}</td>
+                    <td>{{ $hasil->slug }}</td>
                     <td>
                         <form action="{{ route('trash.destroy' , $hasil->id) }}" method="POST">
                         @csrf

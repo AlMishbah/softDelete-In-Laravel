@@ -9,5 +9,5 @@ class Trash extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'slug'];
 }
